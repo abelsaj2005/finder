@@ -1,11 +1,11 @@
-# Finder: Two-Stage Multimodal Photo Search
+# Multimodal Photo Search: CLIP + Claude Vision
 
-Search a photo library in plain English ("person with a horse in a white polo") and get the three best matches with a written explanation for each. Finder is a multimodal RAG pipeline: a fast embedding search narrows thousands of photos to 10 candidates, then a vision-language model looks at those candidates and picks the best 3.
+Search a photo library in plain English ("person with a horse in a white polo") and get the three best matches with a written explanation for each. This is a multimodal RAG pipeline: a fast embedding search narrows thousands of photos to 10 candidates, then a vision-language model looks at those candidates and picks the best 3.
 
 ```
                  ┌──────────── offline, once ─────────────┐
  photos ───────► │ CLIP image embeddings  +  BLIP captions │──► FAISS index
-                 └─────────────────────────────────────────┘
+                 └────────────────────────────────────────┘
                                                                │
  "dog playing                                                  ▼
   with a ball" ──► CLIP text embedding ──► Stage 1: top-10 candidates (~20 ms)

@@ -1,0 +1,8 @@
+torch
+transformers>=4.46.0
+Pillow
+numpy
+faiss-cpu
+anthropic
+openai
+tqdm

@@ -43,7 +43,7 @@ Latency (measured during development): ~20 ms for stage 1 over 5,400+ photos, ~5
 ## Quick start
 
 ```bash
-git clone https://github.com/abelsaj2005/finder && cd finder
+git clone https://github.com/abelsaj2005/multimodal-photo-search && cd multimodal-photo-search
 pip install -r requirements.txt
 cp .env.example .env        # add ANTHROPIC_API_KEY
 
